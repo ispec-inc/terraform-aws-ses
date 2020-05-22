@@ -16,15 +16,17 @@ provider "aws" {
   region = "us-east-1"
 }
 
-module "ses_ispec_io" {
-   source= "ispec-inc/ses/aws"
-   providers = {
-     aws = aws.use1
-   }
+module "ses" {
+  source  = "ispec-inc/ses/aws"
+  version = "0.1.0"
+  
+  providers = {
+    aws = aws.use1
+  }
  
-   domain_name = "hoge.io"
-   from_addresses = ["hogehoge@example.com"]
- }
+  domain_name = "hoge.io"
+  from_addresses = ["hogehoge@example.com"]
+}
 ```
 
 SESは扱えるリージョンが限られているため、(上記の様に)エイリアスとして定義する必要がある場合があります。
