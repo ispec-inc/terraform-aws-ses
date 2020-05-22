@@ -39,3 +39,6 @@ SESは扱えるリージョンが限られているため、(上記の様に)エ
 
 ## Outputs
 now developing...
+
+## License
+Apache 2 Licensed. See LICENSE for full details.
